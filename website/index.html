@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Order Form</title>
+    <meta charset="utf-8">
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Varela+Round&display=swap" rel="stylesheet">
+	<script src="scripts/main.js"></script>
+  </head>
+  <body>
+  
+  	<header>
+		<h1>Baseball Caps</h1>
+	</header>
+	
+	<main>
+		<img id="hat_pic" src="images/nationals.jpg" alt="Washington Nationals Hat">
+		
+		<h3>Select your team:</h3>
+		
+		<form id="orderForm" action="confirm.html" method="get">
+			
+			<input type="radio" name="ball_team" id="Washington" value="Washington" checked>
+			<label for="Washington">Washington Nationals</label><br>
+			
+			<input type="radio" name="ball_team" id="Boston" value="Boston">
+			<label for="Boston">Boston Red Sox</label><br>
+			
+			<input type="radio" name="ball_team" id="Chicago" value="Chicago">
+			<label for="Chicago">Chicago Cubs</label><br>
+			
+			<h3>Provide your shipping information:</h3>
+					
+			<label for="name">Name</label>
+            <input type="text" id="name" name="name">
+			<span></span><br>
+			
+			<label for="phone">Phone</label>
+            <input type="text" id="phone" name="phone">
+            <span></span><br>
+			
+			<label for="email">Email</label>
+            <input type="text" id="email" name="email">
+            <span></span><br>
+
+			<textarea placeholder="Enter special instructions here" name="instructions" id="instructions" rows="3" cols="50"></textarea><br>
+			
+			<h3>Sign up for our mailing lists!</h3>
+		
+			<input type="checkbox" name="mailing_list" id="Promotions" value="Promotions">
+			<label for="Promotions">Promotions</label><br>
+			
+			<input type="checkbox" name="mailing_list" id="Products" value="Products">
+			<label for="Products">New Products</label><br>
+			
+			<input type="checkbox" name="mailing_list" id="Catalog" value="Catalog">
+			<label for="Catalog">Catalog (quarterly)</label><br>
+		
+			<input type="button" id="submit_order" value="Submit Order">
+			<input type="button" id="clear_form" value="Clear Form">
+		</form>
+		
+	</main>
+	
+	<footer>
+		Aaron Schlotterbeck - CS2800: Project 3 - Spring 2021
+    </footer>
+	
+  </body>

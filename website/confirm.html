@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Your Order Confirmation</title>
+    <meta charset="utf-8">
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Varela+Round&display=swap" rel="stylesheet">
+  </head>
+  <body>
+  	<header>
+		<h1>Order Confirmation</h1>
+	</header>
+	<main>
+		<h3>Your order was received on
+		
+	<script>
+	
+	var today = new Date(); 
+	var month = today.getMonth();
+	var month_string;
+	if (month == 0)
+		month_string = "January";
+	else if (month == 1)
+		month_string = "February";
+	else if (month == 2)
+		month_string = "March";
+	else if (month == 3)
+		month_string = "April";
+	else if (month == 4)
+		month_string = "May";
+	else if (month == 5)
+		month_string = "June";	
+	else if (month == 6)
+		month_string = "July";	
+	else if (month == 7)
+		month_string = "August";	
+	else if (month == 8)
+		month_string = "September";	
+	else if (month == 9)
+		month_string = "October";
+	else if (month == 10)
+		month_string = "November";	
+	else if (month == 11)
+		month_string = "December";	
+	
+	var ampm;
+	var hours = today.getHours();
+		if (hours > 12) {
+			ampm = "pm";
+			hours -= 12;
+		}
+		else {
+			ampm = "am";
+		}
+	
+      document.write(month_string + " " + today.getDate() + ", " + today.getFullYear() + " at " + hours + ":");
+	  if (today.getMinutes() < 10) {
+		document.write("0");
+		}
+		
+	  document.writeln(today.getMinutes() + " " + ampm + "<br>");
+	</script></h3>	
+	</main>
+	<footer>
+		Aaron Schlotterbeck - CS2800: Project 3 - Spring 2021
+    </footer>
+  </body>
