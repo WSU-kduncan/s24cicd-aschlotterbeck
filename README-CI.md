@@ -7,12 +7,6 @@ Part 1 -> Dockerize It
 	- (what are you doing, why, what tools?)  
 
 * Run Project Locally  
-	- How to install docker.
-		* I am running Ubuntu 22.04.4 LTS on my device and had to use `sudo apt install docker.io` to install Docker.
-		* After installation, I used `which docker` to locate the executable files.
-		* I also used `docker --version` to identify current version that was installed, which was Docker version 24.0.5.
-		* Lastly, I used `systemctl status docker` to confirm Docker was, in fact, installed and up and running on my system.
-		* To use Docker commands without using sudo, I used `sudo usermod -aG docker ubuntu` to add my user to the Docker group.  
 
 	- How to install dependencies (WSL2).
 		* To install WSL2 on Windows 11, you can open Powershell in administrator mode and select "Run as Administrator", then enter the command `wsl --install`. This will install, setup, and enable the required features to run WSL, and by default, install the Ubuntu distribution of Linux.
@@ -20,6 +14,13 @@ Part 1 -> Dockerize It
 		* To view the list of available Linux distributions available, enter the command `wsl -l -o`.
 		* Additional Linux distributions can be installed following the initial installation by using the command `wsl --install -d <distribution name>`.
 		* In Powershell, I used `wsl -v -l` to confirm that I am currently running WSL version 2.2.1.0.  
+
+- How to install docker.
+		* I am running Ubuntu 22.04.4 LTS on my device and had to use `sudo apt install docker.io` to install Docker.
+		* After installation, I used `which docker` to locate the executable files.
+		* I also used `docker --version` to identify current version that was installed, which was Docker version 24.0.5.
+		* Lastly, I used `systemctl status docker` to confirm Docker was, in fact, installed and up and running on my system.
+		* To use Docker commands without using sudo, I used `sudo usermod -aG docker ubuntu` to add my user to the Docker group.  
 
 	- How to build a container image from the `Dockerfile`.
 		* To build a container image from your `Dockerfile`, you use the command `docker build -t <name-your-image>:<tag> .`.
@@ -40,7 +41,7 @@ Part 1 -> Dockerize It
 			- You can use `curl localhost` and if your website content is up and running, you should see the html file content for your website listed in the terminal.
 			- The next route I took was entering the IP address and port number in the browser to verify the website is accessible. In my case, I am completing this project using my AWS EC2 instance, so my instance's EIP is `54.159.137.125` at port `80`. So I entered `54.159.137.125:80` in the browser address bar to view the contents of my website.
 			- Additionally, I entered `54.159.137.125:80` in different browsers on different devices to further confirm my website content was being served successfully. 
-			
+
 Part 2 -> GitHub Actions and DockerHub  
 * Process to create public repo in DockerHub  
 * How to authenticate with DockerHub via CLI using DockerHub credentials  
