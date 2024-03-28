@@ -52,10 +52,24 @@ Part 2 -> GitHub Actions and DockerHub
 	- I left the `Visibility` labeled `Public` and then clicked the `Create` button.  
 
 * How to authenticate with DockerHub via CLI using DockerHub credentials  
-	- 
-	- What credentials would you recommend providing?  
-* How to push container image to DockerHub (without GitHub Actions)  
-* __Link__ to your DockerHub repository  
+	- I had to setup an `Access Token` for authentication purposes. To do this, from the home page on https://hub.docker.com/, I went to `home > my account > security` to find my access tokens.
+	- I generated a new access token for my account and named it `ceg3120accesstoken`.
+	- Since we can only view this access token once, I also copied and pasted the access token to a file on my local device for future use.
+	- Now, using my personal access token instead of a password, I can authenticate and log in to my DockerHub account from the CLI.
+	- To log in to my DockerHub account, I use `docker login -u aschlotterbeck`.
+	- Next, I'm prompted for a password, this is where the access token can be entered to authenticate and log in to my DockerHub account.
+	- What credentials would you recommend providing?
+		* I recommend using the access token instead of the password as access tokens are often more secure.  
+
+* How to push container image to DockerHub (without GitHub Actions).
+	- To push my container image to DockerHub, I had to first change the name of my container image. I did this by using `docker tag hatorders:v1.0 aschlotterbeck/ceg3120:v1.0`.
+	- I used `docker images` to confirm I now have a repository/image named `aschlotterbeck/ceg3120:v1.0`.
+	- To push the container image to DockerHub, I used `docker push aschlotterbeck/ceg3120:v1.0`.
+	- I refreshed my DockerHub repository page to confirm that the container image successfully pushed to my DockerHub account.  
+
+* __Link__ to your DockerHub repository.  
+	- `https://hub.docker.com/r/aschlotterbeck/ceg3120/tags`  
+
 * Configuring GitHub Secrets  
 	- How to set a secret
 	- What secret(s) are set for this project
