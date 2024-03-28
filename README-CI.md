@@ -43,11 +43,33 @@ Part 1 -> Dockerize It
 			- Additionally, I entered `54.159.137.125:80` in different browsers on different devices to further confirm my website content was being served successfully. 
 
 Part 2 -> GitHub Actions and DockerHub  
-* Process to create public repo in DockerHub  
+* Process to create public repo in DockerHub.
+	- First of all, I had to create a DockerHub account on https://hub.docker.com/.
+	- After logging in to the new DockerHub account, I clicked on the `Repositories` tab at the top of the webpage. Of course, there are no repositories currently listed in the new account.
+	- Then I clicked the `Create Repository` button in the upper right corner of the webpage.
+	- I am using namespace `aschlotterbeck` and I named my new public repository `ceg3120`.
+	- I gave my new public repository a short description to identify it's purpose.
+	- I left the `Visibility` labeled `Public` and then clicked the `Create` button.  
+
 * How to authenticate with DockerHub via CLI using DockerHub credentials  
-	- What credentials would you recommend providing?  
-* How to push container image to DockerHub (without GitHub Actions)  
-* __Link__ to your DockerHub repository  
+	- I had to setup an `Access Token` for authentication purposes. To do this, from the home page on https://hub.docker.com/, I went to `home > my account > security` to find my access tokens.
+	- I generated a new access token for my account and named it `ceg3120accesstoken`.
+	- Since we can only view this access token once, I also copied and pasted the access token to a file on my local device for future use.
+	- Now, using my personal access token instead of a password, I can authenticate and log in to my DockerHub account from the CLI.
+	- To log in to my DockerHub account, I use `docker login -u aschlotterbeck`.
+	- Next, I'm prompted for a password, this is where the access token can be entered to authenticate and log in to my DockerHub account.
+	- What credentials would you recommend providing?
+		* I recommend using the access token instead of the password as access tokens are often more secure.  
+
+* How to push container image to DockerHub (without GitHub Actions).
+	- To push my container image to DockerHub, I had to first change the name of my container image. I did this by using `docker tag hatorders:v1.0 aschlotterbeck/ceg3120:v1.0`.
+	- I used `docker images` to confirm I now have a repository/image named `aschlotterbeck/ceg3120:v1.0`.
+	- To push the container image to DockerHub, I used `docker push aschlotterbeck/ceg3120:v1.0`.
+	- I refreshed my DockerHub repository page to confirm that the container image successfully pushed to my DockerHub account.  
+
+* __Link__ to your DockerHub repository.  
+	- https://hub.docker.com/r/aschlotterbeck/ceg3120/tags  
+
 * Configuring GitHub Secrets  
 	- How to set a secret
 	- What secret(s) are set for this project
