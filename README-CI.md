@@ -13,6 +13,7 @@ Part 1 -> Dockerize It
 		* I also used `docker --version` to identify current version that was installed, which was Docker version 24.0.5.
 		* Lastly, I used `systemctl status docker` to confirm Docker was, in fact, installed and up and running on my system.
 		* To use Docker commands without using sudo, I used `sudo usermod -aG docker ubuntu` to add my user to the Docker group.  
+
 	- How to install dependencies (WSL2).
 		* To install WSL2 on Windows 11, you can open Powershell in administrator mode and select "Run as Administrator", then enter the command `wsl --install`. This will install, setup, and enable the required features to run WSL, and by default, install the Ubuntu distribution of Linux.
 		* You do have the option to change the default Linux distribution that is installed. This can be accomplished by using `wsl --install -d <distribution name>` and then replacing `<distribution name>` with your preferred distro.
@@ -21,10 +22,25 @@ Part 1 -> Dockerize It
 		* In Powershell, I used `wsl -v -l` to confirm that I am currently running WSL version 2.2.1.0.  
 
 	- How to build a container image from the `Dockerfile`.
-		*
-	- How to run the container
-	- How to view the project running in the container (open a browser...go to IP and port...)  
+		* To build a container image from your `Dockerfile`, you use the command `docker build -t <name-your-image>:<tag> .`.
+		* To build my container, I used `docker build -t hatorders:v1.0 .`.
+		* I used `docker images` to confirm my image was successfully built and available on my system.  
 
+	- How to run the container.
+		* To run the container, use the command `docker run -d --name <container-name> -p <port>:<port> <image-name:tag>`.
+			- Replace `<container-name>` with a useful container name of your choice.
+			- Replace `<image-name:tag>` with the specific image and version (tag) you want to use to run the container.
+			- Concerning `<port>:<port>`, as an example, your container is serving content on port `111:`, while your container binds to host port `:222`. Now making the `-p <port>:<port>` portion of the command `111:222`. In other words, `container is serving content on port 111:container binds to host port 222`.
+			- To run my container locally on my system, I used `docker run -d --name hatwebsite -p 80:80 hatorders:v1.0`.
+			- Then I used `docker ps` to view currently running containers.
+			- You can also use `docker ps -a` to view active and exited containers on your system.  
+
+	- How to view the project running in the container (open a browser...go to IP and port...).
+		* Once the website content is up and running in the container, you have a few options to resort to that will help verify your website content is accessible.
+			- You can use `curl localhost` and if your website content is up and running, you should see the html file content for your website listed in the terminal.
+			- The next route I took was entering the IP address and port number in the browser to verify the website is accessible. In my case, I am completing this project using my AWS EC2 instance, so my instance's EIP is `54.159.137.125` at port `80`. So I entered `54.159.137.125:80` in the browser address bar to view the contents of my website.
+			- Additionally, I entered `54.159.137.125:80` in different browsers on different devices to further confirm my website content was being served successfully. 
+			
 Part 2 -> GitHub Actions and DockerHub  
 * Process to create public repo in DockerHub  
 * How to authenticate with DockerHub via CLI using DockerHub credentials  
