@@ -68,7 +68,7 @@ Part 2 -> GitHub Actions and DockerHub
 	- I refreshed my DockerHub repository page to confirm that the container image successfully pushed to my DockerHub account.  
 
 * __Link__ to your DockerHub repository.  
-	- `https://hub.docker.com/r/aschlotterbeck/ceg3120/tags`  
+	- https://hub.docker.com/r/aschlotterbeck/ceg3120/tags  
 
 * Configuring GitHub Secrets  
 	- How to set a secret
