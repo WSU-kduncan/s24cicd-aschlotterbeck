@@ -15,7 +15,7 @@ Part 1 -> Dockerize It
 		* Additional Linux distributions can be installed following the initial installation by using the command `wsl --install -d <distribution name>`.
 		* In Powershell, I used `wsl -v -l` to confirm that I am currently running WSL version 2.2.1.0.  
 
-- How to install docker.
+	- How to install docker.
 		* I am running Ubuntu 22.04.4 LTS on my device and had to use `sudo apt install docker.io` to install Docker.
 		* After installation, I used `which docker` to locate the executable files.
 		* I also used `docker --version` to identify current version that was installed, which was Docker version 24.0.5.
