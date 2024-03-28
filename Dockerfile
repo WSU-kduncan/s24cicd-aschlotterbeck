@@ -2,7 +2,7 @@
 FROM nginx
 COPY ./website/ /usr/share/nginx/html
 # RUN
-# EXPOSE
+EXPOSE 80
 # CMD
 
 # Build apache2 image for website content -> build is successful
