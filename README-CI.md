@@ -43,8 +43,16 @@ Part 1 -> Dockerize It
 			- Additionally, I entered `54.159.137.125:80` in different browsers on different devices to further confirm my website content was being served successfully. 
 
 Part 2 -> GitHub Actions and DockerHub  
-* Process to create public repo in DockerHub  
+* Process to create public repo in DockerHub.
+	- First of all, I had to create a DockerHub account on https://hub.docker.com/.
+	- After logging in to the new DockerHub account, I clicked on the `Repositories` tab at the top of the webpage. Of course, there are no repositories currently listed in the new account.
+	- Then I clicked the `Create Repository` button in the upper right corner of the webpage.
+	- I am using namespace `aschlotterbeck` and I named my new public repository `ceg3120`.
+	- I gave my new public repository a short description to identify it's purpose.
+	- I left the `Visibility` labeled `Public` and then clicked the `Create` button.  
+
 * How to authenticate with DockerHub via CLI using DockerHub credentials  
+	- 
 	- What credentials would you recommend providing?  
 * How to push container image to DockerHub (without GitHub Actions)  
 * __Link__ to your DockerHub repository  
