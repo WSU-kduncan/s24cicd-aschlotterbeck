@@ -90,15 +90,15 @@ Part 2 -> GitHub Actions and DockerHub
 			- Trigger: this establishes that the workflow is triggered when there is a push to the main branch of my GitHub repository.
 			```
 			on:
-				push:
-					branches:
-						- 'main'
+			  push:
+				branches:
+				  - 'main'
 			```
 			- Jobs: There is one job included in this workflow referenced by `docker`. This will run on the `ubuntu-latest` environment.
 			```
 			jobs:
-				docker:
-					runs-on: ubuntu-latest
+			  docker:
+				runs-on: ubuntu-latest
 			```
 			- Steps:  
 	- What variables in workflow are custom to your project?  
