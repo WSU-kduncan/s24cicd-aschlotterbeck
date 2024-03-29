@@ -138,6 +138,8 @@ Part 2 -> GitHub Actions and DockerHub
 Part 3 -> Diagramming  
 * Include a diagram (or diagrams) of the continuous integration process. A good diagram will label tools used and how things connect. This diagram would probably look best near your project description.
 
+- [Optimus Prime](#filler image for diagramming image as a reminder to complete for project)
+
 References:
 * ChatGPT
 * https://www.theserverside.com/blog/Coffee-Talk-Java-News-Stories-and-Opinions/How-to-dockerize-Apache-httpd-web-servers
