@@ -24,7 +24,7 @@ Part 1 -> Dockerize It
 
 	- How to build a container image from the `Dockerfile`.
 		* To build a container image from your `Dockerfile`, you use the command `docker build -t <name-your-image>:<tag> .`.
-		* To build my container, I used `docker build -t hatorders:v1.0 .`.
+		* To build my container, I used `docker build -t hatorders:latest .` (not using specific versioning at this point in the project).
 		* I used `docker images` to confirm my image was successfully built and available on my system.  
 
 	- How to run the container.
@@ -32,7 +32,7 @@ Part 1 -> Dockerize It
 			- Replace `<container-name>` with a useful container name of your choice.
 			- Replace `<image-name:tag>` with the specific image and version (tag) you want to use to run the container.
 			- Concerning `<port>:<port>`, as an example, your container is serving content on host port `111:`, while your container binds to the host port on `:222`. Now making the `-p <port>:<port>` portion of the command `111:222`. In other words, `container is serving content on host port 111:container binds to host on port 222`.
-			- To run my container locally on my system, I used `docker run -d --name hatwebsite -p 80:80 hatorders:v1.0`.
+			- To run my container locally on my system, I used `docker run -d --name hatwebsite -p 80:80 hatorders:latest`.
 			- Then I used `docker ps` to view currently running containers.
 			- You can also use `docker ps -a` to view active and exited containers on your system.  
 
@@ -56,15 +56,15 @@ Part 2 -> GitHub Actions and DockerHub
 	- I generated a new access token for my account and named it `ceg3120accesstoken`.
 	- Since we can only view this access token once, I also copied and pasted the access token to a file on my local device for future use.
 	- Now, using my personal access token instead of a password, I can authenticate and log in to my DockerHub account from the CLI.
-	- To log in to my DockerHub account, I use `docker login -u aschlotterbeck`.
-	- Next, I'm prompted for a password, this is where the access token can be entered to authenticate and log in to my DockerHub account.
+	- To log in to my DockerHub account, I use `docker login -u aschlotterbeck` via CLI.
+	- Next, I'm prompted for a password, this is where the access token can be entered via CLI to authenticate and log in to my DockerHub account.
 	- What credentials would you recommend providing?
 		* I recommend using the access token instead of the password as access tokens are often more secure.  
 
 * How to push container image to DockerHub (without GitHub Actions).
-	- To push my container image to DockerHub, I had to first change the name of my container image. I did this by using `docker tag hatorders:v1.0 aschlotterbeck/ceg3120:v1.0`.
-	- I used `docker images` to confirm I now have a repository/image named `aschlotterbeck/ceg3120:v1.0`.
-	- To push the container image to DockerHub, I used `docker push aschlotterbeck/ceg3120:v1.0`.
+	- To push my container image to DockerHub, I had to first change the name of my container image. I did this by using `docker tag hatorders:latest aschlotterbeck/ceg3120:latest`.
+	- I used `docker images` to confirm I now have a repository/image named `aschlotterbeck/ceg3120:latest`.
+	- To push the container image to DockerHub, I used `docker push aschlotterbeck/ceg3120:latest`.
 	- I refreshed my DockerHub repository page to confirm that the container image successfully pushed to my DockerHub account.  
 
 * __Link__ to your DockerHub repository.  
