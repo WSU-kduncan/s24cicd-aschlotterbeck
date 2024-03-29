@@ -91,14 +91,14 @@ Part 2 -> GitHub Actions and DockerHub
 			```
 			on:
 			  push:
-				branches:
-				  - 'main'
+			    branches:
+			      - 'main'
 			```
 			- Jobs: There is one job included in this workflow referenced by `docker`. This will run on the `ubuntu-latest` environment.
 			```
 			jobs:
 			  docker:
-				runs-on: ubuntu-latest
+			    runs-on: ubuntu-latest
 			```
 			- Steps:  
 	- What variables in workflow are custom to your project?  
