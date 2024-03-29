@@ -87,14 +87,16 @@ Part 2 -> GitHub Actions and DockerHub
 * Behavior of GitHub workflow  
 	- What does it do and when?
 		* My GitHub workflow is triggered whenever there is a push to the main branch of my GitHub repository. My GitHub Actions file builds a Docker image from the included codebase and pushes it to my DockerHub account under the specified tag included in the GitHub Actions file.
-			- Trigger: this establishes that the workflow is triggered when there is a push to the main branch of my GitHub repository.
+			- Trigger: this establishes that the workflow is triggered when there is a push to the main branch of my GitHub repository.  
+
 			```
 			on:
 			  push:
 			    branches:
 			      - 'main'
 			```
-			- Jobs: There is one job included in this workflow referenced by `docker`. This will run on the `ubuntu-latest` environment.
+			- Jobs: There is one job included in this workflow referenced by `docker`. This will run on the `ubuntu-latest` environment.  
+			
 			```
 			jobs:
 			  docker:
