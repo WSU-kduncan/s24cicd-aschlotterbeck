@@ -87,22 +87,45 @@ Part 2 -> GitHub Actions and DockerHub
 * Behavior of GitHub workflow  
 	- What does it do and when?
 		* My GitHub workflow is triggered whenever there is a push to the main branch of my GitHub repository. My GitHub Actions file builds a Docker image from the included codebase and pushes it to my DockerHub account under the specified tag included in the GitHub Actions file.
-			- Trigger: this establishes that the workflow is triggered when there is a push to the main branch of my GitHub repository.  
-
+			- Trigger: this establishes that the workflow is triggered when there is a push to the main branch of my GitHub repository.
 			```
 			on:
 			  push:
 			    branches:
 			      - 'main'
 			```
-			- Jobs: There is one job included in this workflow referenced by `docker`. This will run on the `ubuntu-latest` environment.  
-			
+			- Jobs: There is one job included in this workflow referenced by `docker`. This will run on the `ubuntu-latest` environment.
 			```
 			jobs:
 			  docker:
 			    runs-on: ubuntu-latest
 			```
-			- Steps:  
+			- Steps:
+				* Set up QEMU
+				* Set up Docker Buildx
+				* Login to DockerHub
+				* Build and push
+			```
+			    steps:
+  			      -
+    		        name: Set up QEMU
+    		        uses: docker/setup-qemu-action@v3
+  			      -
+    		        name: Set up Docker Buildx
+    		        uses: docker/setup-buildx-action@v3
+  			      -
+    		        name: Login to Docker Hub
+    		        uses: docker/login-action@v3
+    		        with:
+     		          username: ${{ secrets.DOCKERHUB_USERNAME }}
+      		          password: ${{ secrets.DOCKERHUB_TOKEN }}
+  			      -
+    		        name: Build and push
+    		        uses: docker/build-push-action@v5
+   			        with:
+      		          push: true
+      		          tags: aschlotterbeck/ceg3120:latest
+			```
 	- What variables in workflow are custom to your project?  
 		* This may need to be changed if someone else is going to use it or you reuse it  
 
