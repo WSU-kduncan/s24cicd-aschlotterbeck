@@ -58,9 +58,9 @@ Part 2 -> GitHub Actions and DockerHub
 	- I had to setup an `Access Token` for authentication purposes. To do this, from the home page on https://hub.docker.com/, I went to `home > my account > security` to find my access tokens.
 	- I generated a new access token for my account and named it `ceg3120accesstoken`.
 	- Since we can only view this access token once, I also copied and pasted the access token to a file on my local device for future use.
-	- Now, using my personal access token instead of a password, I can authenticate and log in to my DockerHub account from the CLI.
-	- To log in to my DockerHub account, I use `docker login -u aschlotterbeck` via CLI.
-	- Next, I'm prompted for a password, this is where the access token can be entered via CLI to authenticate and log in to my DockerHub account.
+	- Now, using my personal access token instead of a password, I can authenticate and login to my DockerHub account from the CLI.
+	- To login to my DockerHub account, I use `docker login -u aschlotterbeck` via CLI.
+	- Next, I'm prompted for a password, this is where the access token can be entered via CLI to authenticate and login to my DockerHub account.
 	- What credentials would you recommend providing?
 		* I recommend using the access token instead of the password as access tokens are often more secure.  
 
@@ -138,7 +138,7 @@ Part 2 -> GitHub Actions and DockerHub
 Part 3 -> Diagramming  
 * Include a diagram (or diagrams) of the continuous integration process. A good diagram will label tools used and how things connect. This diagram would probably look best near your project description.
 
-- [CI Project Overview](#Part-1-->-Dockerize-It)
+- [CI Project Overview](#ci-project-overview)
 
 References:
 * ChatGPT
