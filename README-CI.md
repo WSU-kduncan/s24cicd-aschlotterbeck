@@ -6,6 +6,8 @@ Part 1 -> Dockerize It
 * CI Project Overview  
 	- (what are you doing, why, what tools?)  
 
+![filler image for diagramming image as a reminder to complete for project](Optimus-Prime.jpg)  
+
 * Run Project Locally  
 
 	- How to install dependencies (WSL2).
