@@ -129,7 +129,11 @@ Part 2 -> GitHub Actions and DockerHub
       		          tags: aschlotterbeck/ceg3120:latest
 			```
 	- What variables in workflow are custom to your project?  
-		* This may need to be changed if someone else is going to use it or you reuse it  
+
+		* The variables in my workflow that are custom to my project:
+			- `username`
+			- `password`
+			- `tags`  
 
 Part 3 -> Diagramming  
 * Include a diagram (or diagrams) of the continuous integration process. A good diagram will label tools used and how things connect. This diagram would probably look best near your project description.
