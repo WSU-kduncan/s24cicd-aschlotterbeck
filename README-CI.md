@@ -138,7 +138,7 @@ Part 2 -> GitHub Actions and DockerHub
 Part 3 -> Diagramming  
 * Include a diagram (or diagrams) of the continuous integration process. A good diagram will label tools used and how things connect. This diagram would probably look best near your project description.  
 
-![Aaron Schlotterbeck](#Aaron-Schlotterbeck)
+**Diagram included with project description in Part 1**  
 
 References:
 * ChatGPT
