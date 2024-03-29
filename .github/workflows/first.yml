@@ -2,9 +2,12 @@ name: my-first-flow
 on:
   push:
     branches: [main]
-  workflow-dispatch:
+    workflow-dispatch:
 jobs:
   hello-world:
     runs-on: ubuntu-latest
     steps:
       - run: echo "Hello World! Hoping this works!"
+      - run: ls .*
+      - uses: actions/checkout@v4
+      - run: ls .*
