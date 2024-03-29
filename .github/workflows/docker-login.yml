@@ -26,7 +26,8 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           push: true
-          tags: user/app:latest
+          tags: aschlotterbeck/ceg3120:v1.0  
+          #tags: user/app:latest
 
 #name: docker login
 #
