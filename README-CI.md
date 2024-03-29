@@ -71,9 +71,17 @@ Part 2 -> GitHub Actions and DockerHub
 	- https://hub.docker.com/r/aschlotterbeck/ceg3120/tags  
 
 * Configuring GitHub Secrets  
-	- How to set a secret
-	- What secret(s) are set for this project
-		* Note: do not copy paste your secrets into your documentation  
+	- How to set a secret.
+		* Starting from my `https://github.com/WSU-kduncan/s24cicd-aschlotterbeck` repository in GitHub, I can click on the `Settings` tab to open the settings configuration options for this specific repository.
+		* From here, I can click on `Secrets and variables` located under the `Security` heading in the left column of the webpage.
+		* From the drop down options, I selected `Actions` to access `Actions secrets and variables` and then selected `New repository secret`.
+		* I entered `DOCKERHUB_USERNAME` in the `Name *` field and then added my DockerHub username in the `Secret *` field. Then clicked on `Add secret` to save the information entered.
+		* Then I entered another `New repository secret` and entered `DOCKERHUB_TOKEN` in the `Name *` field and then added my DockerHub access token in the `Secret *` field. Then again, clicked on `Add secret` to save the information entered.  
+
+	- What secret(s) are set for this project?
+		* Note: do not copy paste your secrets into your documentation.
+		* For this project, my secrets are my `username` and `access token` required to login to my DockerHub account.  
+		  
 * Behavior of GitHub workflow  
 	- What does it do and when
 	- What variables in workflow are custom to your project  
