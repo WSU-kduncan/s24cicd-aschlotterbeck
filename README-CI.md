@@ -51,7 +51,7 @@ Part 2 -> GitHub Actions and DockerHub
 	- I gave my new public repository a short description to identify it's purpose.
 	- I left the `Visibility` labeled `Public` and then clicked the `Create` button.  
 
-* How to authenticate with DockerHub via CLI using DockerHub credentials  
+* How to authenticate with DockerHub via CLI using DockerHub credentials.  
 	- I had to setup an `Access Token` for authentication purposes. To do this, from the home page on https://hub.docker.com/, I went to `home > my account > security` to find my access tokens.
 	- I generated a new access token for my account and named it `ceg3120accesstoken`.
 	- Since we can only view this access token once, I also copied and pasted the access token to a file on my local device for future use.
@@ -78,15 +78,14 @@ Part 2 -> GitHub Actions and DockerHub
 		* I entered `DOCKERHUB_USERNAME` in the `Name *` field and then added my DockerHub username in the `Secret *` field. Then clicked on `Add secret` to save the information entered.
 		* Then I entered another `New repository secret` and entered `DOCKERHUB_TOKEN` in the `Name *` field and then added my DockerHub access token in the `Secret *` field. Then again, clicked on `Add secret` to save the information entered.  
 
-	- What secret(s) are set for this project?
-		* Note: do not copy paste your secrets into your documentation.
-		* For this project, my secrets are my `username` and `access token` required to login to my DockerHub account.  
-		  
+	- What secret(s) are set for this project?		
+		* For this project, my secrets are my `username` and `access token` required to login to my DockerHub account.
+		* Both secrets are required in the GitHub actions yml file to provide authentication for login to my DockerHub account prior to the automated build and push of the Docker image.  
+
 * Behavior of GitHub workflow  
-	- What does it do and when
-	- What variables in workflow are custom to your project  
+	- What does it do and when?
+	- What variables in workflow are custom to your project?  
 		* This may need to be changed if someone else is going to use it or you reuse it  
 
 Part 3 -> Diagramming  
 * Include a diagram (or diagrams) of the continuous integration process. A good diagram will label tools used and how things connect. This diagram would probably look best near your project description.
-
