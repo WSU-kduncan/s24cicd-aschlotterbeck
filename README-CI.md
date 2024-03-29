@@ -31,7 +31,7 @@ Part 1 -> Dockerize It
 		* To run the container, use the command `docker run -d --name <container-name> -p <port>:<port> <image-name:tag>`.
 			- Replace `<container-name>` with a useful container name of your choice.
 			- Replace `<image-name:tag>` with the specific image and version (tag) you want to use to run the container.
-			- Concerning `<port>:<port>`, as an example, your container is serving content on port `111:`, while your container binds to host port `:222`. Now making the `-p <port>:<port>` portion of the command `111:222`. In other words, `container is serving content on port 111:container binds to host port 222`.
+			- Concerning `<port>:<port>`, as an example, your container is serving content on host port `111:`, while your container binds to the host port on `:222`. Now making the `-p <port>:<port>` portion of the command `111:222`. In other words, `container is serving content on host port 111:container binds to host on port 222`.
 			- To run my container locally on my system, I used `docker run -d --name hatwebsite -p 80:80 hatorders:v1.0`.
 			- Then I used `docker ps` to view currently running containers.
 			- You can also use `docker ps -a` to view active and exited containers on your system.  
