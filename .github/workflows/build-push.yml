@@ -1,3 +1,7 @@
+# yml file for project 4
+# GH actions that build and push docker image to DH
+# GH actions use secrets for DH login
+
 name: Build and push docker image to DockerHub
 
 on:
@@ -26,4 +30,4 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           push: true
-          tags: aschlotterbeck/ceg3120:v1.0
+          tags: aschlotterbeck/ceg3120:latest
