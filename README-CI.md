@@ -5,9 +5,17 @@ CEG 3120: Project 04
 Part 1 -> Dockerize It  
 * CI Project Overview  
 
-	- (what are you doing, why, what tools?)  
+	For Project 4, we are learning about continuous integration by meeting the project objectives. These objectives include utilizing Docker to containerize an application. The process of containerizing an application includes packaging both the application and its dependencies into a container. This process allows our application to easily be deployed and to run consistently in various environments. Containers also provide a means to isolate applications from the system infrastructure. 
 
-![filler image for diagramming image as a reminder to complete for project](Optimus-Prime.jpg)  
+
+	* Tools:
+	- GitHub (actions/workflow, repository, and secrets)
+	- DockerHub account & repository
+	- Docker installation & Dockerfile
+	- WSL installation
+	-
+
+![filler image for diagram as a reminder to complete for project](Optimus-Prime.jpg)  
 
 * Run Project Locally  
 
