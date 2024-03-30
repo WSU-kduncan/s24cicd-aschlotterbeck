@@ -5,15 +5,21 @@ CEG 3120: Project 04
 Part 1 -> Dockerize It  
 * CI Project Overview  
 
-	For Project 4, we are learning about continuous integration by meeting the project objectives. These objectives include utilizing Docker to containerize an application. The process of containerizing an application includes packaging both the application and its dependencies into a container. This process allows our application to easily be deployed and to run consistently in various environments. Containers also provide a means to isolate applications from the system infrastructure. 
-
+	For Project 4, we are learning about continuous integration by meeting the project objectives. These objectives include utilizing Docker to containerize an application. The process of containerizing an application includes packaging both the application and its dependencies into a container. This process allows our application to easily be deployed and to run consistently in various environments. Containers also provide a means to isolate applications from the system infrastructure. The next objective for this project includes using GitHub Actions and workflows to automate the project pipeline. Using GitHub Actions and workflows, we can customize and define various tasks and workflows within our GitHub repositories. The various tasks we want to execute and automate are defined using a YAML (yml) file. In our case, we are utilizing GitHub Actions and workflows to build a yml file that will automate the process of building and pushing our container image to our DockerHub account each time we push to the main branch of our GitHub repositories.  
 
 	* Tools:
-	- GitHub (actions/workflow, repository, and secrets)
-	- DockerHub account & repository
-	- Docker installation & Dockerfile
+	- GitHub Marketplace
+	- GitHub Actions and workflows
+	- YAML file (yml)
+	- GitHub repository
+	- GitHub secrets
+	- DockerHub account
+	- DockerHub repository
+	- Docker CLI installation
+	- Dockerfile
 	- WSL installation
-	-
+	- Nginx Docker image
+	- 
 
 ![filler image for diagram as a reminder to complete for project](Optimus-Prime.jpg)  
 
