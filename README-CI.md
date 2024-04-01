@@ -20,7 +20,7 @@ Part 1 -> Dockerize It
 	- WSL2 platform
 	- Nginx Docker image
 
-![filler image for diagram as a reminder to complete for project](Optimus-Prime.jpg)  
+![Continuous Integration Diagram](projectCI.png)  
 
 * Run Project Locally  
 
