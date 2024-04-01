@@ -18,7 +18,9 @@ Part 1 -> Dockerize It
 	- Docker tools and services
 	- Dockerfile
 	- WSL2 platform
-	- Nginx Docker image
+	- Nginx Docker image  
+
+* CI Diagram
 
 ![Continuous Integration Diagram](projectCI.png)  
 
@@ -148,10 +150,9 @@ Part 2 -> GitHub Actions and DockerHub
 			- `password`
 			- `tags`  
 
-Part 3 -> Diagramming  
-* Include a diagram (or diagrams) of the continuous integration process. A good diagram will label tools used and how things connect. This diagram would probably look best near your project description.  
+Part 3 -> Continuous Integration Process Diagram  
 
-__Diagram to be included with project description in Part 1__  
+__Diagram is included with project description in Part 1__  
 
 References:
 * ChatGPT
