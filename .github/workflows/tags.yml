@@ -3,7 +3,7 @@
 # GH actions use secrets for DH login
 # GH actions to generate a set of tags from my repository
 
-name: testing tags yml files
+name: testing tags yml
 
 on:
   push:
