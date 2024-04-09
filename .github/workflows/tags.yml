@@ -25,12 +25,11 @@ jobs:
         uses: docker/metadata-action@v5
         with:
           images: |
-            ghcr.io/aschlotterbeck/ceg3120
+            aschlotterbeck/ceg3120
           tags: |
-            type=ref,event=branch
-            type=ref,event=pr
             type=semver,pattern={{version}}
             type=semver,pattern={{major}}.{{minor}}
+            type=server,pattern={{major}}
       -
         name: Set up QEMU
         uses: docker/setup-qemu-action@v3
