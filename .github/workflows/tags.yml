@@ -27,6 +27,8 @@ jobs:
           images: |
             aschlotterbeck/ceg3120
           tags: |
+            type=ref,event=branch
+            type=ref,event=pr
             type=semver,pattern={{version}}
             type=semver,pattern={{major}}.{{minor}}
             type=server,pattern={{major}}
