@@ -25,7 +25,7 @@ jobs:
         uses: docker/metadata-action@v5
         with:
           images: |
-            aschlotterbeck/ceg3120
+            ghcr.io/aschlotterbeck/ceg3120
           tags: |
             type=ref,event=branch
             type=ref,event=pr
