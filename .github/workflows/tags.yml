@@ -7,10 +7,8 @@ name: TBD
 
 on:
   push:
-    branches:
-      - 'main'
     tags:
-      - 'v1.0'
+      - 'v*.*'
 
 jobs:
   docker:
