@@ -2,7 +2,7 @@ Aaron Schlotterbeck
 Spring 2024  
 CEG 3120: Project 04  
 
-Part 1 -> Dockerize It  
+## Part 1 -> Dockerize It  
 * CI Project Overview  
 
 	For Project 4, we are learning about continuous integration by meeting the project objectives. These objectives include utilizing Docker to containerize an application. The process of containerizing an application includes packaging both the application and its dependencies into a container. This process allows our application to easily be deployed and to run consistently in various environments. Containers also provide a means to isolate applications from the system infrastructure. The next objective for this project includes using GitHub Actions and workflows to automate the project pipeline. Using GitHub Actions and workflows, we can customize and define various tasks and workflows within our GitHub repositories. The various tasks we want to execute and automate are defined using a YAML (yml) file. In our case, we are utilizing GitHub Actions and workflows to build a yml file that will automate the process of building and pushing our container image to our DockerHub account each time we push to the main branch of our GitHub repositories.  
@@ -60,7 +60,7 @@ Part 1 -> Dockerize It
 			- The next route I took was entering the IP address and port number in the browser to verify the website is accessible. In my case, I am completing this project using my AWS EC2 instance, so my instance's EIP is `54.159.137.125` at port `80`. So I entered `54.159.137.125:80` in the browser address bar to view the contents of my website.
 			- Additionally, I entered `54.159.137.125:80` in different browsers on different devices to further confirm my website content was being served successfully. 
 
-Part 2 -> GitHub Actions and DockerHub  
+## Part 2 -> GitHub Actions and DockerHub  
 * Process to create public repo in DockerHub.
 	- First of all, I had to create a DockerHub account on https://hub.docker.com/.
 	- After logging in to the new DockerHub account, I clicked on the `Repositories` tab at the top of the webpage. Of course, there are no repositories currently listed in the new account.
@@ -150,7 +150,7 @@ Part 2 -> GitHub Actions and DockerHub
 			- `password`
 			- `tags`  
 
-Part 3 -> Continuous Integration Process Diagram  
+## Part 3 -> Continuous Integration Process Diagram  
 
 __Diagram is included with project description in Part 1__  
 
