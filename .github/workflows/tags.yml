@@ -8,7 +8,7 @@ name: testing tags yml file
 on:
   push:
     branches:
-      - '**'
+      - 'main'
     tags:
       - 'v*.*'
 
