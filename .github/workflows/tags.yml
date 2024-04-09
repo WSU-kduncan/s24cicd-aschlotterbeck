@@ -28,7 +28,7 @@ jobs:
             aschlotterbeck/ceg3120
           tags: |
             type=ref,event=branch
-            type=semver,pattern=v{{major}}.{{minor}}
+            type=semver,pattern={{raw}}
       -
         name: Set up QEMU
         uses: docker/setup-qemu-action@v3
