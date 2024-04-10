@@ -26,6 +26,7 @@ jobs:
             aschlotterbeck/ceg3120
           tags: |
             type=ref,event=branch
+            type=semver,pattern={{major}}
             type=semver,pattern={{major}}.{{minor}}
       -
         name: Set up QEMU
