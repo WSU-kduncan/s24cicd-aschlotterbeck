@@ -43,13 +43,13 @@ CEG 3120: Project 05
 			    runs-on: ubuntu-latest
             ```
             - Steps:
-				* Checkout: this action checks out the code from the repository
-                * Docker meta: generates metadata for the docker image based on the repository and current ref (branch and tag)
-                * Set up QEMU
-				* Set up Docker Buildx
-				* Login to DockerHub
-                * Login to GHCR
-				* Build and push
+				* Checkout: this action checks out the code from the repository.
+                * Docker meta: generates metadata for the docker image based on the repository and current ref (branch and tag). The action utilizes the included semantic versioning patterns to generate tags.
+                * Set up QEMU: uses the "docker/setup-qemu-action" to setup QEMU.
+				* Set up Docker Buildx: uses the "docker/setup-buildx-action" to setup Docker Buildx.
+				* Login to DockerHub: uses "docker/login-action" to login to Docker Hub using GitHub secrets credentials.
+                * Login to GHCR: uses "docker/login-action" to login to GitHub Container Registry using GitHub secrets credentials.
+				* Build and push: 
 			```
                 steps:
                   -
