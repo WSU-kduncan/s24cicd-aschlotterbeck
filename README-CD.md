@@ -35,6 +35,7 @@ CEG 3120: Project 05
 			      - 'main'
                 tags:
                   - 'v*.*'
+            ```
             - Jobs: There is one job included in this workflow referenced by `docker`. This will run on the `ubuntu-latest` environment.
             ```
             jobs:
