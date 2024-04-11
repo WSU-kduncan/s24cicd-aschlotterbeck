@@ -25,6 +25,7 @@ CEG 3120: Project 05
 
 * Behavior of GitHub workflow
     - What does it do and when?
+	* Lets go!
 
 * Link to Docker Hub repository (as additional proof)  
     - https://hub.docker.com/repository/docker/aschlotterbeck/ceg3120/general  
