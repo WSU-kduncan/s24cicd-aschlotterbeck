@@ -49,7 +49,7 @@ CEG 3120: Project 05
 				* Set up Docker Buildx: uses the "docker/setup-buildx-action" to setup Docker Buildx.
 				* Login to DockerHub: uses "docker/login-action" to login to Docker Hub using GitHub secrets credentials.
                 * Login to GHCR: uses "docker/login-action" to login to GitHub Container Registry using GitHub secrets credentials.
-				* Build and push: uses "docker/build-push-action" to build and push the container image to the specified DockerHub repository. Uses Docker metadata (generated from 'steps: Docker meta' to output tags/labels).
+				* Build and push: uses "docker/build-push-action" to build and push the container image to the specified DockerHub repository. Uses Docker metadata (generated from 'steps: Docker meta') to output tags/labels.
 			```
                 steps:
                   -
