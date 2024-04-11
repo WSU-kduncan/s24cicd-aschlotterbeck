@@ -25,7 +25,7 @@ CEG 3120: Project 05
 
 * Behavior of GitHub workflow
     - What does it do and when?
-        * My GitHub workflow is triggered whenever there is a push to the main branch of my GitHub repository and any tags that match the pattern 'v*.*'. My GitHub Actions file builds a Docker image from the included codebase and pushes it to my DockerHub account under the specified tag included in the GitHub Actions file.  
+        * My GitHub workflow is triggered whenever there is a push to the main branch of my GitHub repository and any tags that match the pattern 'v*.*'. My GitHub Actions file builds a Docker image from the included codebase and pushes it to my DockerHub account under the specified tags (versions: latest, major, & major.minor) included in the GitHub Actions file.  
 
 			- Trigger: this establishes that the workflow is triggered when there is a push to the main branch of my GitHub repository and any tags that match the pattern 'v*.*'.
 			```
@@ -35,7 +35,65 @@ CEG 3120: Project 05
 			      - 'main'
                 tags:
                   - 'v*.*'
+            - Jobs: There is one job included in this workflow referenced by `docker`. This will run on the `ubuntu-latest` environment.
+            ```
+            jobs:
+			  docker:
+			    runs-on: ubuntu-latest
+            ```
+            - Steps:
+				* Checkout: this action checks out the code from the repository
+                * Docker meta: generates metadata for the docker image based on the repository and current ref (branch and tag)
+                * Set up QEMU
+				* Set up Docker Buildx
+				* Login to DockerHub
+                * Login to GHCR
+				* Build and push
 			```
+                steps:
+                  -
+                    name: Checkout
+                    uses: actions/checkout@v4
+                  -
+                    name: Docker meta
+                    id: meta
+                    uses: docker/metadata-action@v5
+                    with:
+                      images: |
+                        aschlotterbeck/ceg3120
+                      tags: |
+                        type=ref,event=branch
+                        type=semver,pattern={{major}}
+                        type=semver,pattern={{major}}.{{minor}}
+                  -
+                    name: Set up QEMU
+                    uses: docker/setup-qemu-action@v3
+                  -
+                    name: Set up Docker Buildx
+                    uses: docker/setup-buildx-action@v3
+                  -
+                    name: Login to Docker Hub
+                    uses: docker/login-action@v3
+                    with:
+                      username: ${{ secrets.DOCKERHUB_USERNAME }}
+                      password: ${{ secrets.DOCKERHUB_TOKEN }}
+                  -
+                    name: Login to GHCR
+                    uses: docker/login-action@v3
+                    with:
+                      registry: ghcr.io
+                      username: ${{ github.repository_owner }}
+                      password: ${{ secrets.GITHUB_TOKEN }}
+                  -
+                    name: Build and push
+                    uses: docker/build-push-action@v5
+                    with:
+                      context: .
+                      push: ${{ github.event_name != 'pull_request' }}
+                      #push: true
+                      tags: ${{ steps.meta.outputs.tags }}
+                      labels: ${{ steps.meta.outputs.labels }}
+            ```
 
 * Link to Docker Hub repository (as additional proof)  
     - https://hub.docker.com/repository/docker/aschlotterbeck/ceg3120/general  
