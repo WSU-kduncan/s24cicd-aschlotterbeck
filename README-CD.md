@@ -18,7 +18,10 @@ CEG 3120: Project 05
             - `git push origin <tag-name>`.
             - The lightweight tag would be `git push origin v1.1.1`.
             - The annotated tag would be `git push origin v1.1.2`.
-    - You can also push multiple tags using `git push --tags`.  
+    - You can also push multiple tags using `git push --tags`.
+    - Tags can also be removed locally and remotely.
+        * Locally, you can use `git tag -d <tag-name>`.
+        * Remotely, you can use `git push origin --delete <tag-name>`.  
 
 * Behavior of GitHub workflow
     - What does it do and when?

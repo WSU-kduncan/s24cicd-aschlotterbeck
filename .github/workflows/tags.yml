@@ -3,10 +3,12 @@
 # GH actions use secrets for DH login
 # GH actions to generate a set of tags from my repository
 
-name: testing tags yml
+name: Build and push docker image to DockerHub with semantic versioning
 
 on:
   push:
+    branches:
+      - 'main'
     tags:
       - 'v*.*'
 
