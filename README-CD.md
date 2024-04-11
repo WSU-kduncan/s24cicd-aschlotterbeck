@@ -25,6 +25,17 @@ CEG 3120: Project 05
 
 * Behavior of GitHub workflow
     - What does it do and when?
+        * My GitHub workflow is triggered whenever there is a push to the main branch of my GitHub repository and any tags that match the pattern 'v*.*'. My GitHub Actions file builds a Docker image from the included codebase and pushes it to my DockerHub account under the specified tag included in the GitHub Actions file.  
+
+			- Trigger: this establishes that the workflow is triggered when there is a push to the main branch of my GitHub repository and any tags that match the pattern 'v*.*'.
+			```
+			on:
+			  push:
+			    branches:
+			      - 'main'
+                tags:
+                  - 'v*.*'
+			```
 
 * Link to Docker Hub repository (as additional proof)  
     - https://hub.docker.com/repository/docker/aschlotterbeck/ceg3120/general  
