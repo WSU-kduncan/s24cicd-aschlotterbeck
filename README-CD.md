@@ -19,11 +19,12 @@ CEG 3120: Project 05
             - The lightweight tag would be `git push origin v1.1.1`.
             - The annotated tag would be `git push origin v1.1.2`.
     - You can also push multiple tags using `git push --tags`.  
-    
+
 * Behavior of GitHub workflow
     - What does it do and when?
 
 * Link to Docker Hub repository (as additional proof)  
+    - https://hub.docker.com/repository/docker/aschlotterbeck/ceg3120/general  
 
 ## Deployment  
 
