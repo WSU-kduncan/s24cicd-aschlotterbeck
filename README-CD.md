@@ -106,20 +106,30 @@ CEG 3120: Project 05
 		* I am running Ubuntu 22.04.4 LTS on my device and had to use `sudo apt install docker.io` to install Docker on my second EC2 instance.
 		* After installation, I used `which docker` to locate the executable files.
 		* I also used `docker --version` to identify current version that was installed, which was Docker version 24.0.5.
-		* Lastly, I used `systemctl status docker` to confirm Docker was, in fact, installed and up and running on my system.
+		* Lastly, I used `systemctl status docker` to confirm Docker was successfully installed and up and running on my system.
 		* To use Docker commands without using sudo, I used `sudo usermod -aG docker ubuntu` to add my user to the Docker group.  
 
 * Container restart script
-    - Justification & description of what it does
-    - Where it should be on server
+    - Justification & description of what it does:
+      * 
+    - Where it should be on server:
+      * 
 * Setting up a `webhook` on the server
-    - How to install adnanh's `webhook` to server
-    - How to start the `webhook`
-        * Since our instance's reboot, we need to handle this
+    - How to install adnanh's `webhook` to server:
+      * I used `sudo apt-get install webhook` to install adnanh's `webhook` to server.
+      * Then used `which webhook` to locate the installation path.
+      * Then used `systemctl status webhook.services` to find it was __inactive__. Next step will explain how to start the webhook service.  
+
+    - How to start the `webhook`:
+      * 
+        - Since our instance's reboot, we need to handle this
 * `webhook` task definition file
-    - Description of what it does
-    - Where it should be on server
-* How to configure GitHub OR DockerHub to message the listener  
+    - Description of what it does:
+      * 
+    - Where it should be on server:
+      * 
+* How to configure GitHub OR DockerHub to message the listener:
+  -   
 
 ## Demonstration  
 
