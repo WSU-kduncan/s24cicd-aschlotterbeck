@@ -143,7 +143,11 @@ CEG 3120: Project 05
     * 
 
 * How to configure GitHub OR DockerHub to message the listener:
-  -   
+  - In DockerHub, I clicked on the `Webhooks` tab.
+  - In `Webhooks`, I entered a name for my webhook `my hook` and added my Webhook URL `http://44.222.56.54:9000/hooks/spidey`. Then clicked on `+` to add the newly configured webhook.
+    * EIP of the instance: 44.222.56.54
+    * Webhook port: 9000
+    * Hook Id: spidey  
 
 ## Demonstration  
 
