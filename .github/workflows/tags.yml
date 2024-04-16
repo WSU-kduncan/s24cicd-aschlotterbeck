@@ -7,8 +7,8 @@ name: Build and push docker image to DockerHub with semantic versioning
 
 on:
   push:
-    branches:
-      - 'main'
+    #branches:
+    #  - 'main'
     tags:
       - 'v*.*'
 
