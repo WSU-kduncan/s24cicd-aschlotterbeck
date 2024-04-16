@@ -116,21 +116,21 @@ CEG 3120: Project 05
     * The next docker command is `docker pull aschlotterbeck/ceg3120:latest`. This will pull a new container image, specifically the `aschlotterbeck/ceg3120:latest` container image from my DockerHub repository.
     * The last command `docker run -d -p 80:80 --name baseballCaps --restart always aschlotterbeck/ceg3120:latest` will run the new container image `aschlotterbeck/ceg3120:latest`, but by the newly assigned image name `baseballCaps`. This container will run in detached mode, which means it will run as a background process. Port 80 of the host machine will be mapped to port 80 of the container. The container will always restart automatically if it stops.
   - Where it should be on instance:
-    * On my instance, the script is located at the working directory `/home/ubuntu`.
+    * On the instance, the `restart.sh` script is located in my ubuntu home directory `/home/ubuntu`.
   - Add your script to your repository:
     * https://github.com/WSU-kduncan/s24cicd-aschlotterbeck/blob/main/deployment/restart.sh  
 
-* Setting up a `webhook` on the server
-  - How to install adnanh's `webhook` to server:
-    * I used `sudo apt-get install webhook` to install adnanh's `webhook` to server.
-    * Then used `which webhook` to locate the installation path.
+* Setting up a `webhook` on the instance:
+  - How to install adnanh's `webhook` to the instance:
+    * I used `sudo apt-get install webhook` to install adnanh's `webhook` to the instance.
+    * Then used `which webhook` to locate the installation path: `/usr/bin/webhook`
     * Then used `systemctl status webhook.services` to find it was __inactive__ following installation. I will explain how to start the webhook service in the upcoming steps.  
 
 * `webhook` task definition file
   - Description of what it does:
     * 
   - Where it should be on instance:
-    * 
+    * On the instance, the `hooks.json` file is located in my ubuntu home directory `/home/ubuntu`.
   - Add your webhook definition file to your respository:
     * 
 
