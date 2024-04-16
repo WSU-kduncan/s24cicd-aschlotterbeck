@@ -97,12 +97,12 @@ CEG 3120: Project 05
             ```
 
 * Link to Docker Hub repository (as additional proof)  
-    - https://hub.docker.com/repository/docker/aschlotterbeck/ceg3120/general  
+  - https://hub.docker.com/repository/docker/aschlotterbeck/ceg3120/general  
 
 ## Deployment  
 
 * How to install Docker to your instance?  
-    - How to install docker.
+  - How to install docker.
 		* I am running Ubuntu 22.04.4 LTS on my device and had to use `sudo apt install docker.io` to install Docker on my second EC2 instance.
 		* After installation, I used `which docker` to locate the executable files.
 		* I also used `docker --version` to identify current version that was installed, which was Docker version 24.0.5.
@@ -110,30 +110,45 @@ CEG 3120: Project 05
 		* To use Docker commands without using sudo, I used `sudo usermod -aG docker ubuntu` to add my user to the Docker group.  
 
 * Container restart script
-    - Justification & description of what it does:
-      * 
-    - Where it should be on server:
-      * 
-* Setting up a `webhook` on the server
-    - How to install adnanh's `webhook` to server:
-      * I used `sudo apt-get install webhook` to install adnanh's `webhook` to server.
-      * Then used `which webhook` to locate the installation path.
-      * Then used `systemctl status webhook.services` to find it was __inactive__. Next step will explain how to start the webhook service.  
+  - Justification & description of what it does:
+    * My `restart.sh` script will give the docker commmand `docker stop baseballCaps` to stop the the running baseBall caps container image.
+    * Then the docker command `docker remove baseballCaps` to remove the container image from the list of available container images. The old `aschlotterbeck/ceg3120:latest` container image will need to be removed before we can pull a new, fresh container image.
+    * The next docker command is `docker pull aschlotterbeck/ceg3120:latest`. This will pull a new container image, specifically the `aschlotterbeck/ceg3120:latest` container image from my DockerHub repository.
+    * The last command `docker run -d -p 80:80 --name baseballCaps --restart always aschlotterbeck/ceg3120:latest` will run the new container image `aschlotterbeck/ceg3120:latest`, but by the newly assigned image name `baseballCaps`. This container will run in detached mode, which means it will run as a background process. Port 80 of the host machine will be mapped to port 80 of the container. The container will always restart automatically if it stops.
+  - Where it should be on instance:
+    * On the instance, the `restart.sh` script is located in my ubuntu home directory `/home/ubuntu`.
+  - Add your script to your repository:
+    * https://github.com/WSU-kduncan/s24cicd-aschlotterbeck/blob/main/deployment/restart.sh  
 
-    - How to start the `webhook`:
-      * test test test
-        - Since our instance's reboot, we need to handle this
+* Setting up a `webhook` on the instance:
+  - How to install adnanh's `webhook` to the instance:
+    * I used `sudo apt-get install webhook` to install adnanh's `webhook` to the instance.
+    * Then used `which webhook` to locate the installation path: `/usr/bin/webhook`
+    * Then used `systemctl status webhook.services` to find it was __inactive__ following installation. I will explain how to start the webhook service in the upcoming steps.  
+
 * `webhook` task definition file
-    - Description of what it does:
-      * 
-    - Where it should be on server:
-      * 
+  - Description of what it does:
+    * 
+  - Where it should be on instance:
+    * On the instance, the `hooks.json` file is located in my ubuntu home directory `/home/ubuntu`.
+  - Add your webhook definition file to your respository:
+    * 
+
+* How to start the `webhook`:
+  -
+
+* How to modify/create a webhook service file such that your webhook listener is listening as soon as the system is booted:
+  - Include commands to reload the service respective to files changed (webhook service file versus hook definition file).
+  - Add your webhook service file to your repository:
+    * 
+
 * How to configure GitHub OR DockerHub to message the listener:
   -   
 
 ## Demonstration  
 
-* Either in-person demonstration OR video file showing full CI / CD workflow in action  
+* Proof that the CI & CD workflow work:
+  - Either in-person demonstration OR video file showing full CI / CD workflow in action  
 
 ## Diagramming  
 
