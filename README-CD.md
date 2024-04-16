@@ -128,7 +128,7 @@ CEG 3120: Project 05
 
 * `webhook` task definition file
   - Description of what it does:
-    * 
+    * The task definition file will listen for an incoming webhook request from GitHub/DockerHub (DH in my project) and when the `id` matches the webhook request, the file will execute the `restart.sh` script located in the `/home/ubuntu` working directory.
   - Where it should be on instance:
     * On the instance, the `hooks.json` file is located in my ubuntu home directory `/home/ubuntu`.
   - Add your webhook definition file to your respository:
