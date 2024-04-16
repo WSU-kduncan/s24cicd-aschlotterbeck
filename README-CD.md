@@ -165,7 +165,8 @@ CEG 3120: Project 05
 
 ## Diagramming  
 
-* Logically diagrammed steps for continuous deployment workflow  
+* Logically diagrammed steps for continuous deployment workflow
+__Diagram is included with project description in Part 1__  
 
 ## References  
 * ChatGPT
