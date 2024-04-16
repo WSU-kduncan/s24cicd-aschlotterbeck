@@ -142,7 +142,7 @@ CEG 3120: Project 05
   - In the `/home/ubuntu root directory`, I used `cd /lib/systemd/system` and then `ls` to locate the `webhook.service` file.
   - I used `sudo vim webhook.service` to open the file in vim and to modify the file contents.
   - In the `ConditionPathExists=/etc/webhook.conf` line I replaced the `/etc/webhook.conf` portion with the path to my `hooks.json` file, which is `/home/ubuntu/hooks.json`.
-  - In the `ExecStart=/usr/bin/webhook -nopanic -hooks /etc/webhook.conf` line I replace the `/etc/webhook.conf` portion with the path to my `hooks.json` file, which is `/home/ubuntu/hooks.json`.
+  - In the `ExecStart=/usr/bin/webhook -nopanic -hooks /etc/webhook.conf` line I replaced the `/etc/webhook.conf` portion with the path to my `hooks.json` file, which is `/home/ubuntu/hooks.json` and added `-verbose` at the end of the line to improve logging info of the service.
   - Then I used `Esc` and `wq` to save and close the modified `webhook.service` vim file.
   - After the file modifications, I had to reload the webhook service using the command `sudo systemctl daemon-reload`.
   - After the service reload, I used `sudo systemctl restart webhook.service` to restart the service.
