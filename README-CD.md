@@ -112,7 +112,7 @@ CEG 3120: Project 05
 * Container restart script
   - Justification & description of what it does:
     * My `restart.sh` script will give the docker commmand `docker stop baseballCaps` to stop the the running baseBall caps container image.
-    * Then the docker command `docker remove baseballCaps` to remove the container image from the list of available container images. The old `aschlotterbeck/ceg3120:latest` container image will need to be removed before we can pull a new, fresh container image.
+    * Then the docker command `docker remove baseballCaps` to remove the container image from the list of available container images so the `baseballCap` container image name can be reused.
     * The next docker command is `docker pull aschlotterbeck/ceg3120:latest`. This will pull a new container image, specifically the `aschlotterbeck/ceg3120:latest` container image from my DockerHub repository.
     * The last command `docker run -d -p 80:80 --name baseballCaps --restart always aschlotterbeck/ceg3120:latest` will run the new container image `aschlotterbeck/ceg3120:latest`, but by the newly assigned image name `baseballCaps`. This container will run in detached mode, which means it will run as a background process. Port 80 of the host machine will be mapped to port 80 of the container. The container will always restart automatically if it stops.
   - Where it should be on instance:
@@ -138,7 +138,15 @@ CEG 3120: Project 05
   -
 
 * How to modify/create a webhook service file such that your webhook listener is listening as soon as the system is booted:
-  - Include commands to reload the service respective to files changed (webhook service file versus hook definition file).
+  - In the `/home/ubuntu root directory`, I used `cd /lib/systemd/system` and then `ls` to locate the `webhook.service` file.
+  - I used `sudo vim webhook.service` to open the file in vim and to modify the file contents.
+  - In the `ConditionPathExists=/etc/webhook.conf` line I replaced the `/etc/webhook.conf` portion with the path to my `hooks.json` file, which is `/home/ubuntu/hooks.json`.
+  - In the `ExecStart=/usr/bin/webhook -nopanic -hooks /etc/webhook.conf` line I replace the `/etc/webhook.conf` portion with the path to my `hooks.json` file, which is `/home/ubuntu/hooks.json`.
+  - Then I used `Esc` and `wq` to save and close the modified `webhook.service` vim file.
+  - After the file modifications, I had to reload the webhook service using the command `sudo systemctl daemon-reload`.
+  - After the service reload, I used `sudo systemctl restart webhook.service` to restart the service.
+  - Then I used `systemctl status webhook.service` to confirm the webhook service was actively running on the instance.  
+
   - Add your webhook service file to your repository:
     * 
 
