@@ -169,3 +169,7 @@ CEG 3120: Project 05
 
 ## References  
 * ChatGPT
+* Class lectures
+* Links provided in Pilot
+* Links provided on Discord
+* Links provided within Project 5
