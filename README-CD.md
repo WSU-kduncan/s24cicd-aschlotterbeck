@@ -132,7 +132,7 @@ CEG 3120: Project 05
   - Where it should be on instance:
     * On the instance, the `hooks.json` file is located in my ubuntu home directory `/home/ubuntu`.
   - Add your webhook definition file to your respository:
-    * 
+    * https://github.com/WSU-kduncan/s24cicd-aschlotterbeck/blob/main/deployment/hooks.json  
 
 * How to start the `webhook`:
   -
