@@ -6,6 +6,7 @@ CEG 3120: Project 05
 
 * CD Project Overview
     - (What are you doing, why, what tools?)
+    - NEED TO COMPLETE
 
 * How to generate a `tag` in `git` / GitHub?
     - You can generate either annotated tags in `git / GitHub` or you can generate lightweight tags.
@@ -135,7 +136,7 @@ CEG 3120: Project 05
     * https://github.com/WSU-kduncan/s24cicd-aschlotterbeck/blob/main/deployment/hooks.json  
 
 * How to start the `webhook`:
-  -
+  - NEED TO COMPLETE
 
 * How to modify/create a webhook service file such that your webhook listener is listening as soon as the system is booted:
   - In the `/home/ubuntu root directory`, I used `cd /lib/systemd/system` and then `ls` to locate the `webhook.service` file.
