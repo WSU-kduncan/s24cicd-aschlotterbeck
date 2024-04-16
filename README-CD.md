@@ -111,9 +111,12 @@ CEG 3120: Project 05
 
 * Container restart script
   - Justification & description of what it does:
-    * 
+    * My `restart.sh` script will give the docker commmand `docker stop baseballCaps` to stop the the running baseBall caps container image.
+    * Then the docker command `docker remove baseballCaps` to remove the container image from the list of available container images. The old `aschlotterbeck/ceg3120:latest` container image will need to be removed before we can pull a new, fresh container image.
+    * The next docker command is `docker pull aschlotterbeck/ceg3120:latest`. This will pull a new container image, specifically the `aschlotterbeck/ceg3120:latest` container image from my DockerHub repository.
+    * The last command `docker run -d -p 80:80 --name baseballCaps --restart always aschlotterbeck/ceg3120:latest` will run the new container image `aschlotterbeck/ceg3120:latest`, but by the newly assigned image name `baseballCaps`. This container will run in detached mode, which means it will run as a background process. Port 80 of the host machine will be mapped to port 80 of the container. The container will always restart automatically if it stops.
   - Where it should be on instance:
-    * 
+    * On my instance, the script is located at the working directory `/home/ubuntu`.
   - Add your script to your repository:
     * https://github.com/WSU-kduncan/s24cicd-aschlotterbeck/blob/main/deployment/restart.sh  
 
@@ -141,6 +144,8 @@ CEG 3120: Project 05
 
 * How to configure GitHub OR DockerHub to message the listener:
   -   
+
+## Demonstration  
 
 * Proof that the CI & CD workflow work:
   - Either in-person demonstration OR video file showing full CI / CD workflow in action  
