@@ -148,7 +148,7 @@ CEG 3120: Project 05
   - Then I used `systemctl status webhook.service` to confirm the webhook service was actively running on the instance.  
 
   - Add your webhook service file to your repository:
-    * 
+    * https://github.com/WSU-kduncan/s24cicd-aschlotterbeck/blob/main/deployment/webhook.service  
 
 * How to configure GitHub OR DockerHub to message the listener:
   - In DockerHub, I clicked on the `Webhooks` tab.
