@@ -6,7 +6,7 @@ CEG 3120: Project 05
 
 * CD Project Overview  
 
-    
+
     
 
     __Tools and Resources:__
@@ -182,15 +182,13 @@ CEG 3120: Project 05
 
 ## Demonstration  
 
-* Proof that the CI & CD workflow work:
-  - Either in-person demonstration OR video file showing full CI / CD workflow in action  
+* Proof that the CI & CD workflow work:  
 
 ## Diagramming  
 
-* Logically diagrammed steps for continuous deployment workflow
 __Diagram is included with project description in Part 1__  
 
-## References  
+References  
 * ChatGPT
 * Class lectures
 * Links provided in Pilot
