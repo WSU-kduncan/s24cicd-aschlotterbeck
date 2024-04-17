@@ -136,8 +136,8 @@ CEG 3120: Project 05
     * https://github.com/WSU-kduncan/s24cicd-aschlotterbeck/blob/main/deployment/hooks.json  
 
 * How to start the `webhook`:
-  - NEED TO COMPLETE
-
+  - The command `webhook -hooks hooks.json -verbose` will start the webhook server using the hooks.json file as the configuration and will provide verbose output for detailed logging.  
+   
 * How to modify/create a webhook service file such that your webhook listener is listening as soon as the system is booted:
   - In the `/home/ubuntu root directory`, I used `cd /lib/systemd/system` and then `ls` to locate the `webhook.service` file.
   - I used `sudo vim webhook.service` to open the file in vim and to modify the file contents.
