@@ -29,7 +29,7 @@ CEG 3120: Project 05
 
 * CI Diagram  
 
-![]()
+![Continuous Deployment Diagram](CD_image.png)  
 
 * How to generate a `tag` in `git` / GitHub?
     - You can generate either annotated tags in `git / GitHub` or you can generate lightweight tags.
