@@ -9,22 +9,21 @@ CEG 3120: Project 05
     - NEED TO COMPLETE  
 
 __Tools and Resources:__
-	- GitHub Actions and workflows
-	- GitHub repository
-	- GitHub secrets
-  - Git tags
-  - Semantic Versioning
-  - YAML file (yml)
-	- DockerHub account
-	- DockerHub repository
-	- Docker tools and services
-	- Dockerfile
-  - Docker Metadata
-	- WSL2 platform
-	- Nginx Docker image
-  - AWS EC2 instances
-  - Adnanh's webhook
-  - 
+- GitHub Actions and workflows
+- GitHub repository
+- GitHub secrets
+- Git tags
+- Semantic Versioning
+- YAML file (yml)
+- DockerHub account
+- DockerHub repository
+- Docker tools and services
+- Dockerfile
+- Docker Metadata
+- WSL2 platform
+- Nginx Docker image
+- AWS EC2 instances
+- Adnanh's webhook  
 
 * CI Diagram  
 
