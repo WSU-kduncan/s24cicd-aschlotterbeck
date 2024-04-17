@@ -6,8 +6,9 @@ CEG 3120: Project 05
 
 * CD Project Overview  
 
+    In Project 4, we were learning about continuous integration by meeting the project objectives. These objectives included utilizing Docker to containerize an application. The process of containerizing an application includes packaging both the application and its dependencies into a container. This process allows our application to easily be deployed and to run consistently in various environments. Containers also provide a means to isolate applications from the system infrastructure. The next objective for this project includes using GitHub Actions and workflows to automate the project pipeline. Using GitHub Actions and workflows, we can customize and define various tasks and workflows within our GitHub repositories. The various tasks we want to execute and automate are defined using a YAML (yml) file. In our case, we are utilizing GitHub Actions and workflows to build a yml file that will automate the process of building and pushing our container image to our DockerHub account each time we push to the main branch of our GitHub repositories.
 
-    
+    For Project 5, we are expanding upon the continuous integration process by adding continuous deployment to automate the release of updates into the production environment. We modified our yml file to run when a tag had been pushed to our GitHub repository. Additionally, container images and tags were also pushed to DockerHub. We utilized Docker metadata-actions in the yml file to build and push images to DockerHub, as well as generate tags for our images in DockerHub. These tags demonstrated the use of semantic versioning by including images tagged with latest, major.minor, and major. Next, we had to set up our webhook to help automate our tasks and processes. We initially had to setup a script (my script file: restart.sh) that would stop and remove old container images, then pull a new container image from DockerHub, and lastly restart that container image. We also constructed a hooks.json file that could be triggered to execute the commands included in the restart.sh script. GitHub or DockerHub could be used to setup webhooks to help initiate a workflow, in this case, GitHub or DockerHub would be consider a messager. A second instance was used to install and configure a webhook service to act as a listener. Once an event is triggered (tags being pushed to DockerHub), DockerHub (or GitHub) sends a message (webhook), the webhook service (listener) receives the message and if the id in the hooks.json file matches the id in the DockerHub (or GitHub) webhook URL, the restart.sh script is executed. In the end, allowing us to automate the process of releasing an updated version of our website.  
 
     __Tools and Resources:__
     - GitHub Actions and workflows
@@ -188,7 +189,7 @@ CEG 3120: Project 05
 
 __Diagram is included with project description in Part 1__  
 
-References  
+References:  
 * ChatGPT
 * Class lectures
 * Links provided in Pilot
