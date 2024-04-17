@@ -27,7 +27,7 @@ CEG 3120: Project 05
     - AWS EC2 instances
     - Adnanh's webhook  
 
-* CI Diagram  
+* CD Diagram  
 
 ![Continuous Deployment Diagram](CD_image.png)  
 
