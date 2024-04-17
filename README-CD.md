@@ -4,26 +4,27 @@ CEG 3120: Project 05
 
 ## Semantic Versioning  
 
-* CD Project Overview
-    - (What are you doing, why, what tools?)
-    - NEED TO COMPLETE  
+* CD Project Overview  
 
-__Tools and Resources:__
-- GitHub Actions and workflows
-- GitHub repository
-- GitHub secrets
-- Git tags
-- Semantic Versioning
-- YAML file (yml)
-- DockerHub account
-- DockerHub repository
-- Docker tools and services
-- Dockerfile
-- Docker Metadata
-- WSL2 platform
-- Nginx Docker image
-- AWS EC2 instances
-- Adnanh's webhook  
+    
+    
+
+    __Tools and Resources:__
+    - GitHub Actions and workflows
+    - GitHub repository
+    - GitHub secrets
+    - Git tags
+    - Semantic Versioning
+    - YAML file (yml)
+    - DockerHub account
+    - DockerHub repository
+    - Docker tools and services
+    - Dockerfile
+    - Docker Metadata
+    - WSL2 platform
+    - Nginx Docker image
+    - AWS EC2 instances
+    - Adnanh's webhook  
 
 * CI Diagram  
 
