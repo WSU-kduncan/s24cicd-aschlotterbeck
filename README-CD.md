@@ -126,12 +126,12 @@ CEG 3120: Project 05
 ## Deployment  
 
 * How to install Docker to your instance?  
-  - How to install docker.
-		* I am running Ubuntu 22.04.4 LTS on my device and had to use `sudo apt install docker.io` to install Docker on my second EC2 instance.
-		* After installation, I used `which docker` to locate the executable files.
-		* I also used `docker --version` to identify current version that was installed, which was Docker version 24.0.5.
-		* Lastly, I used `systemctl status docker` to confirm Docker was successfully installed and up and running on my system.
-		* To use Docker commands without using sudo, I used `sudo usermod -aG docker ubuntu` to add my user to the Docker group.  
+  - How to install docker:  
+	  * I am running Ubuntu 22.04.4 LTS on my device and had to use `sudo apt install docker.io` to install Docker on my second EC2 instance.
+	  * After installation, I used `which docker` to locate the executable files.
+	  * I also used `docker --version` to identify current version that was installed, which was Docker version 24.0.5.
+	  * Lastly, I used `systemctl status docker` to confirm Docker was successfully installed and up and running on my system.
+	  * To use Docker commands without using sudo, I used `sudo usermod -aG docker ubuntu` to add my user to the Docker group.  
 
 * Container restart script
   - Justification & description of what it does:
