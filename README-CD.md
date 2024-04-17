@@ -181,10 +181,6 @@ CEG 3120: Project 05
     * Webhook port: 9000
     * Hook Id: spidey  
 
-## Demonstration  
-
-* Proof that the CI & CD workflow work:  
-
 ## Diagramming  
 
 __Diagram is included with project description in Part 1__  
