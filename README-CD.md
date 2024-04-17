@@ -6,7 +6,29 @@ CEG 3120: Project 05
 
 * CD Project Overview
     - (What are you doing, why, what tools?)
-    - NEED TO COMPLETE
+    - NEED TO COMPLETE  
+
+__Tools and Resources:__
+	- GitHub Actions and workflows
+	- GitHub repository
+	- GitHub secrets
+  - Git tags
+  - Semantic Versioning
+  - YAML file (yml)
+	- DockerHub account
+	- DockerHub repository
+	- Docker tools and services
+	- Dockerfile
+  - Docker Metadata
+	- WSL2 platform
+	- Nginx Docker image
+  - AWS EC2 instances
+  - Adnanh's webhook
+  - 
+
+* CI Diagram  
+
+![]()
 
 * How to generate a `tag` in `git` / GitHub?
     - You can generate either annotated tags in `git / GitHub` or you can generate lightweight tags.
@@ -137,7 +159,7 @@ CEG 3120: Project 05
 
 * How to start the `webhook`:
   - The command `webhook -hooks hooks.json -verbose` will start the webhook server using the hooks.json file as the configuration and will provide verbose output for detailed logging.  
-   
+
 * How to modify/create a webhook service file such that your webhook listener is listening as soon as the system is booted:
   - In the `/home/ubuntu root directory`, I used `cd /lib/systemd/system` and then `ls` to locate the `webhook.service` file.
   - I used `sudo vim webhook.service` to open the file in vim and to modify the file contents.
